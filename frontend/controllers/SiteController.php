@@ -146,6 +146,18 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays account page.
+     *
+     * @return mixed
+     */
+    public function actionAccount()
+    {
+        return $this->render('account',[
+            'model' => Yii::$app->user,
+        ]);
+    }
+
+    /**
      * Signs user up.
      *
      * @return mixed
